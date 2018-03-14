@@ -1,6 +1,7 @@
 {
   "config": {
     "target": "http://localhost:3000",
+    "processor": "./artillery-payload.js",
     "phases": [ 
       {
         "duration": 2,
