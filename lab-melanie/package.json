@@ -1,0 +1,14 @@
+{
+  "name": "lab-melanie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "load-test-create-user.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "faker": "^4.1.0"
+  }
+}
