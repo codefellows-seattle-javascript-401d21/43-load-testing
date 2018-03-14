@@ -1,0 +1,48 @@
+{
+  "config": {
+    "target": "http://localhost:3000",
+    "phases": [
+      {
+        "duration": 10,
+        "arrivalRate": 2
+      },
+      {
+        "duration": 10,
+        "arrivalRate": 700
+      }
+    ]
+    ,
+    "processor" : "./create-user.js"
+  },
+  "scenarios": [
+    {
+      "name" : "Create Users",
+      "flow": [
+        {
+          "function": "create"
+        },
+        {
+          "post": {
+            "url": "/api/v1/signup",
+            "json": {
+              "username": "{{ username }}",
+              "email": " {{ email }}",
+              "password": "{{ password }}"
+            },
+            "capture" : {
+              "json": "$.token",
+              "as": "token"
+            }
+          }
+        }
+        ,
+        {
+          "get": {
+            "url": "/gallery",
+            "Authorization": "Bearer {{ token }}"
+          }
+        }
+      ]
+    }
+  ]
+}
