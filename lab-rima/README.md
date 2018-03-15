@@ -1,4 +1,4 @@
-## Load Test
+## Lab-43 Load Test
 ##### Local host:
 * High load not broken:
     duration: 20
