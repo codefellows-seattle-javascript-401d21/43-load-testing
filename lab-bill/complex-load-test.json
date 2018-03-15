@@ -1,0 +1,50 @@
+{
+    "config": {
+      "target": "https://cfgram-back-end.herokuapp.com",
+      "phases": [
+        {
+          "duration": 5,
+          "arrivalRate": 5
+        },
+        {
+          "duration": 5,
+          "arrivalRate": 20
+        }
+      ]
+      ,
+      "processor" : "./load-test-create-user.js"
+    },
+    "scenarios": [
+      {
+        "name" : "Create Users",
+        "flow": [
+          {
+            "function": "create"
+          },
+          {
+            "post": {
+              "url": "/signup",
+              "afterResponse": "getToken",
+              "json": {
+                "username": "{{ username }}",
+                "email": " {{ email }}",
+                "password": "{{ password }}"
+              }
+            }
+          }
+          ,
+          {
+            "post": {
+                "url": "/profiles",
+                "headers": {
+                  "Authorization": "Bearer {{ token }}"
+                },
+                "json": {
+                  "bio": "{{bio}}"
+                }
+              }
+          }
+        ]
+      }
+    ]
+  }
