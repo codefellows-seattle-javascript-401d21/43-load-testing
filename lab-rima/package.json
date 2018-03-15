@@ -1,0 +1,14 @@
+{
+  "name": "lab-rima",
+  "version": "1.0.0",
+  "description": "",
+  "main": "load-test-create.user.js",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "faker": "^4.1.0"
+  }
+}
