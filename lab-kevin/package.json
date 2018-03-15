@@ -1,0 +1,21 @@
+{
+  "name": "lab-kevin",
+  "version": "1.0.0",
+  "description": "lab 43 - Load Testing:  Create n run load tst on local host and deployed version of the backend.",
+  "main": "artillery-payload.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "artillery",
+    "load",
+    "test",
+    "latency"
+  ],
+  "author": "Kevin Miller",
+  "license": "MIT",
+  "dependencies": {
+    "faker": "^4.1.0",
+    "uuid": "^3.2.1"
+  }
+}
