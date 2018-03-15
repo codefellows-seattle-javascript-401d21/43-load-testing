@@ -4,14 +4,15 @@ const faker = require('faker');
 const loadTestUser = module.exports = {};
 
 loadTestUser.create = (userContext,events,done) => {
+//   userContext.vars.username = faker.hacker.noun();
+//   userContext.vars.email = faker.hacker.noun();
+//   userContext.vars.password = faker.hacker.noun();
+//   userContext.vars.bio = faker.hacker.noun();
+
   userContext.vars.username = faker.internet.userName() + Math.random();
   userContext.vars.email = faker.internet.email();
   userContext.vars.password = faker.internet.password() + Math.random();
-
-  userContext.vars.bio = faker.lorem.words(10);
-  userContext.vars.avatar = faker.image.imageUrl();
-  userContext.vars.firstName = faker.name.firstName();
-  userContext.vars.lastName = faker.name.lastName();
+  userContext.vars.bio = faker.lorem.word();
 
   return done();
 };
