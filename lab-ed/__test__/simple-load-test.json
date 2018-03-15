@@ -1,0 +1,27 @@
+{
+  "config": {
+    "target": "https://cfbackendz.herokuapp.com/",
+    "phases": [
+      {
+        "duration": 5,
+        "arrivalRate": 2
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "flow": [
+        {
+          "post": {
+            "url": "welcome/signup",
+            "json": {
+              "username": "jahuda",
+              "email": "jahuda@ridgeback.com",
+              "password": "jahuda"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
